@@ -15,7 +15,7 @@ def make_noise(batch, dim, truncation=None):
 
       
 def is_conditional(G):
-    return 'biggan' in G.__class__.__name__.lower()
+    return G.__class__.__name__ == "ConditionedBigGAN"
 
 
 def one_hot(dims, value, indx):

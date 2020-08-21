@@ -24,6 +24,7 @@ SHIFT_DISTRIDUTION_DICT = {
 
 WEIGHTS = {
     'BigGAN': 'models/pretrained/generators/BigGAN/G_ema.pth',
+    'BigBiGAN': 'models/pretrained/generators/BigBiGAN/BigBiGAN_x1.pth',
     'ProgGAN': 'models/pretrained/generators/ProgGAN/100_celeb_hq_network-snapshot-010403.pth',
     'SN_MNIST': 'models/pretrained/generators/SN_MNIST',
     'SN_Anime': 'models/pretrained/generators/SN_Anime',

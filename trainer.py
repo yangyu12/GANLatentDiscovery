@@ -110,8 +110,9 @@ class Trainer(object):
             self.fixed_test_noise = noise.clone()
         for z, prefix in zip([noise, self.fixed_test_noise], ['rand', 'fixed']):
             fig = make_interpolation_chart(
-                G, deformator, z=z, shifts_r=3 * self.p.shift_scale, shifts_count=3, dims_count=15,
-                dpi=500)
+                G, deformator, z=z, shifts_r=3 * self.p.shift_scale, shifts_count=3,
+                dims_count=min(15, self.p.directions_count), dpi=500
+            )
 
             self.writer.add_figure('{}_deformed_interpolation'.format(prefix), fig, step)
             fig_to_image(fig).convert("RGB").save(

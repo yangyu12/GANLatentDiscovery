@@ -91,7 +91,8 @@ def inspect_all_directions(G, deformator, out_dir, zs=None, num_z=3, shifts_r=8.
     os.makedirs(out_dir, exist_ok=True)
 
     step = 20
-    max_dim = G.dim_shift
+    # max_dim = G.dim_shift
+    max_dim = deformator.input_dim
     zs = zs if zs is not None else make_noise(num_z, G.dim_z).cuda()
     shifts_count = zs.shape[0]
 
